@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism</title>
 </head>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+        link.addEventListener('click', function () {
+            const target = document.querySelector(this.getAttribute("href"));
+            if (target) {
+                target.classList.add("highlight");
+                setTimeout(() => target.classList.remove("highlight"), 2000);
+            }
+        });
+    });
+</script>
+
 
 <body>
     <h1>
@@ -50,6 +62,12 @@
                     </a></h3>
             </li>
             <li>
+
+                <h3><a href="#table">
+                        Table
+                    </a></h3>
+            </li>
+            <li>
                 <h3><a href="details.html" target="_blank">
                         Cantact us
                     </a></h3>
@@ -74,8 +92,14 @@
     <br>
     <video controls loop muted poster="https://newsroom.info/UploadCache/libfiles/2/7/800x450o/469.jpg" width="400"
         height="250">
-        <source src="../videos/video.mp4">
+        <source src="https://raw.githubusercontent.com/keroKGS111/HTML-Project/refs/heads/main/videos/video.mp4">
     </video>
+    <style>
+        #more {
+            font-size: 20px;
+            font-style: bold;
+        }
+    </style>
     <p id="more">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos harum aliquam atque optio modi ipsum
         nesciunt
         eligendi dolor, consectetur odio quibusdam culpa ab provident sed cumque deserunt cupiditate dolorem reiciendis
@@ -215,12 +239,56 @@
 
     </ul>
     <audio id="song" controls loop muted title="Song">
-        <source src="../sounds/habibi.mp3">
+        <source src="https://raw.githubusercontent.com/keroKGS111/HTML-Project/refs/heads/main/sounds/habibi.mp3">
     </audio>
     <br>
     <br>
     <img src="https://www.visit-gem.com/storage/informations/1752589691_1737030068_DSC00437-min.jpeg" width="400"
         height="250">
+    <br>
+    <br>
+    <!-- جدول مواعيد زيارة اهرامات الجيزة -->
+    <table dir="rtl" id="table">
+        <thead>
+            <tr>
+                <th style="font-size: 27px;" colspan="3"><mark><u>جدول مواعيد زيارة اهرامات الجيزة</u></mark></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>في فصل الصيف </td>
+                <td>أبريل - سبتمبر</td>
+                <td>من 7 صباحاً إلى 6 مساءً تقريباً، وتتوقف عند 4 مساءً لدخول الأهرامات</td>
+            </tr>
+            <tr>
+                <td>في الشتاء</td>
+                <td>أكتوبر - مارس</td>
+                <td>من 8 صباحاً إلى 4 مساءً، حسب بعض المصادر، بينما تشير مصادر أخرى إلى أن الدخول يتوقف عند 4 أو 5 مساءً
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>خلال شهر رمضان</td>
+
+                <td colspan="2"> تبدأ من 8 صباحاً وتستمر حتى 4:30 أو 8:30 مساءً</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <style>
+        table,
+        td,
+        th {
+            margin: auto;
+            border: solid;
+            border-collapse: collapse;
+            text-align: center;
+            padding: 19px;
+            font-size: 20px;
+            font-style: bold;
+        }
+    </style>
 </body>
 
 </html>
